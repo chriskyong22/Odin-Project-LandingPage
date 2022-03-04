@@ -4,6 +4,7 @@
     --info-color: #1F2937;
     --quote-background-color: #E5E7EB;
     --quote-color: #1F2937;
+    --hero-primary-color: #F9FAF8;
 }
 
 body {
@@ -20,12 +21,12 @@ body {
 }
 
 button {
-    padding: 0.10em 1.5em;
+    padding: 0.25em 1.5em;
     width: fit-content;
     background-color: inherit;
     border: 2px solid inherit;
     font-size: 18px;
-    font-weight: lighter;
+    font-weight: bold;
     border-radius: 5px;
 }
 
@@ -154,7 +155,7 @@ button {
     color: var(--quote-color);
 }
 
-.quote {
+.quote-container {
     width: 60%;
     margin: 0 auto;
 
@@ -163,23 +164,52 @@ button {
     gap: 0px;
 }
 
-.quote .text,
-.quote .author {
+.quote-container .text,
+.quote-container .author {
     padding: 0px;
     margin: 0px;
     color: inherit;
 }
 
-.quote .text {
+.quote-container .text {
     font-size: 36px;
     font-weight: lighter;
     font-style: italic;
 }
 
-.quote .author {
+.quote-container .author {
     align-self: flex-end;
     font-size: 24px;
     font-weight: bolder;
+}
+
+.actionCall {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.actionCall .container {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--blue);
+    border-radius: 5px;
+    padding: 3em 1.25em;
+}
+
+.actionCall .container .description {
+    display: flex;
+    flex-direction: column;
+}
+
+.actionCall .title {
+    font-weight: bold;
+}
+
+.actionCall .sign-up-btn {
+    color: var(--hero-primary-color);
+    border: 2px solid var(--hero-primary-color);
+    background-color: inherit;
+    align-self: center;
 }
 
 .footer {
