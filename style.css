@@ -1,21 +1,38 @@
+:root {
+    --blue: #3882F6; 
+    --leftRightPadding: 15%;
+}
+
 body {
-    font-family: 'roboto';
+    font-family: 'Roboto', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    line-height: 1.5;
     margin: 0px;
 }
 
 .dark-background {
     background-color: #1F2937;
 }
+
+button {
+    padding: 0.10em 1.5em;
+    width: fit-content;
+    background-color: inherit;
+    border: 2px solid inherit;
+    font-size: 18px;
+    font-weight: lighter;
+    border-radius: 5px;
+}
+
 .header,
 .footer,
 .intro,
 .main-info,
 .quote,
 .actionCall {
-    padding: 0rem 15%;
+    padding: 0rem var(--leftRightPadding);
 }
 
 
@@ -56,7 +73,7 @@ body {
     --padding: 6em;
     padding-top: var(--padding);
     padding-bottom: var(--padding);
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .intro .left {
@@ -67,17 +84,37 @@ body {
 
 .left .title {
     font-size: 48px;
-    font-weight: 1200;
+    font-weight: 900;
+    line-height: 1;
 }
 
 .intro img {
+    flex: 1 1 auto;
     background-color: grey;
     color: white;
     text-align: center;
     padding: 1rem;
+
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; 
 }
 
+.intro .sign-up-btn {
+    padding: 0.10em 1.5em;
+    width: fit-content;
+    background-color: var(--blue);
+    border: 2px solid var(--blue);
+    color: white;
+    font-size: 18px;
+    font-weight: lighter;
+    border-radius: 5px;
+}
 
 .footer {
     margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; 
 }
