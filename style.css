@@ -1,6 +1,7 @@
 :root {
     --blue: #3882F6; 
     --leftRightPadding: 15%;
+    --info-color: #1F2937;
 }
 
 body {
@@ -93,7 +94,6 @@ button {
     background-color: grey;
     color: white;
     text-align: center;
-    padding: 1rem;
 
     max-height: 100%;
     max-width: 100%;
@@ -101,14 +101,48 @@ button {
 }
 
 .intro .sign-up-btn {
-    padding: 0.10em 1.5em;
-    width: fit-content;
     background-color: var(--blue);
     border: 2px solid var(--blue);
     color: white;
-    font-size: 18px;
-    font-weight: lighter;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+.main-info .title {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--info-color);
+    padding: 1em;
+}
+
+.main-info .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-info .image img {
+    border: 3px solid var(--blue);
+    width: 150px;
+    height: 150px;
     border-radius: 5px;
+}
+
+.main-info .image p {
+    max-width: 150px;
 }
 
 .footer {
